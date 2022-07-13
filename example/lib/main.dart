@@ -41,8 +41,7 @@ class MyHomePage extends StatelessWidget {
           onTap: (index) {
             print('${index} tapped');
           },
-          title: tags,
-          tagBackgroundColor: Colors.yellow,
+          tagTitles: tags,
           boxDecoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
         ),
       ),

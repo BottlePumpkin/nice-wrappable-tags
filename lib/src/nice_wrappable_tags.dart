@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class NiceWrappableTags extends StatelessWidget {
   const NiceWrappableTags({
     Key? key,
-    required this.title,
+    required this.tagTitles,
     this.tagTextStyle = const TextStyle(),
     this.tagBackgroundColor = Colors.grey,
     this.outPadding = const EdgeInsets.only(right: 10, top: 2),
@@ -14,7 +14,7 @@ class NiceWrappableTags extends StatelessWidget {
     this.boxDecoration,
   }) : super(key: key);
 
-  final List<String> title;
+  final List<String> tagTitles;
   final TextStyle tagTextStyle;
   final Color tagBackgroundColor;
   final EdgeInsets outPadding;
@@ -26,7 +26,7 @@ class NiceWrappableTags extends StatelessWidget {
   Widget build(BuildContext context) {
     return Wrap(
       children: List.generate(
-        title.length,
+        tagTitles.length,
         (index) => Padding(
           padding: outPadding,
           child: InkWell(
@@ -36,13 +36,13 @@ class NiceWrappableTags extends StatelessWidget {
             },
             child: Container(
               padding: inPadding,
-              decoration: boxDecoration != null
+              decoration: boxDecoration == null
                   ? BoxDecoration(
                       color: tagBackgroundColor,
                       borderRadius: BorderRadius.circular(16),
                     )
                   : boxDecoration?.copyWith(color: tagBackgroundColor),
-              child: Text(title[index], style: tagTextStyle),
+              child: Text(tagTitles[index], style: tagTextStyle),
             ),
           ),
         ),

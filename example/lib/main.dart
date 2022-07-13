@@ -25,13 +25,17 @@ class MyHomePage extends StatelessWidget {
   const MyHomePage({Key? key}) : super(key: key);
 
   static const List<String> tags = [
-    'developer', 'ios', 'flutter', 'android', 'React Native', 'java'
-
+    'developer',
+    'ios',
+    'flutter',
+    'android',
+    'React Native',
+    'java'
   ];
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       body: Center(
         child: NiceWrappableTags(
           onTap: (index) {
@@ -39,9 +43,7 @@ class MyHomePage extends StatelessWidget {
           },
           title: tags,
           tagBackgroundColor: Colors.yellow,
-          boxDecoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20)
-          ),
+          boxDecoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
         ),
       ),
     );

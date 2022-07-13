@@ -1,6 +1,6 @@
 name: nice_wrappable_tags
 description: It is a tag that can be wrapped according to the size of the device when several tags are listed.
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/DustinPark92/nice-wrappable_tags
 
 environment:
